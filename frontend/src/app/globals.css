@@ -1,0 +1,45 @@
+html, body { margin: 0; background: #fff; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+body.aircraft-site.govuk-template__body,
+body.aircraft-site.govuk-template__body * { font-family: Helvetica, Arial, sans-serif; }
+.govuk-generic-header.aircraft-header { background: #000; border-bottom: 3px solid #000; }
+.aircraft-header .aircraft-header__inner { padding-top: 14px; padding-bottom: 14px; }
+.govuk-generic-header .aircraft-header__brand {
+  --govuk-text-colour: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  word-spacing: normal;
+}
+.aircraft-header__icon {
+  display: block;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 30px;
+  background-color: currentColor;
+  mask: url('/helicopter.svg') center / contain no-repeat;
+}
+.aircraft-content { flex: 1; width: calc(100% - 30px); }
+.aircraft-main { padding-top: 20px; padding-bottom: 40px; }
+.aircraft-postcode-panel {
+  background: #f3f3f3;
+  padding: 15px;
+  margin: 30px 0 40px;
+}
+.aircraft-postcode-panel .govuk-button { margin-bottom: 15px; }
+.aircraft-results { margin-top: 20px; }
+.govuk-footer.aircraft-footer {
+  background: #f3f2f1;
+  border-top: 10px solid #000;
+  color: #0b0c0c;
+}
+.aircraft-footer .aircraft-footer__text { color: #0b0c0c; }
+@media (min-width: 641px) {
+  .aircraft-content { width: calc(100% - 60px); }
+  .aircraft-main { padding-top: 40px; }
+  .aircraft-postcode-panel { margin-bottom: 60px; }
+  .aircraft-postcode-panel .govuk-button { margin-bottom: 40px; }
+}

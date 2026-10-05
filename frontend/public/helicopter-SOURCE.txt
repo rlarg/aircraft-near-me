@@ -1,0 +1,4 @@
+Westland Lynx helicopter shape by RexKramer1
+Source: https://github.com/RexKramer1/AircraftShapesSVG/blob/main/Shapes%20SVG/LYNX.svg
+Licence: GNU General Public License v3.0; see helicopter-LICENSE.txt.
+Modified 2026-10-05: cropped the SVG viewBox and set display dimensions for the site header. Original artwork paths and credit metadata retained.
