@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState, type SubmitEvent, type MouseEvent } from "react";
 import Link from "next/link";
 
+// Validate postcode format only; this does not confirm that a postcode exists.
+const UK_POSTCODE_PATTERN = /^(?:GIR0AA|[A-PR-UWYZ](?:\d{1,2}|[A-HK-Y]\d{1,2}|\d[A-HJKSTUW]|[A-HK-Y]\d[ABEHMNPRV-Y])\d[ABD-HJLNP-UW-Z]{2})$/;
+
 export default function Home() {
   const [postcode, setPostcode] = useState("");
   const [error, setError] = useState("");
@@ -29,7 +32,7 @@ export default function Home() {
     event.preventDefault();
     const value = postcode.trim().toUpperCase().replace(/\s/g, "");
     setLocation("");
-    if (!/^(GIR0AA|[A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2})$/.test(value)) {
+    if (!UK_POSTCODE_PATTERN.test(value)) {
       setError("This isn't a valid postcode.");
       summary.current?.focus();
       return;

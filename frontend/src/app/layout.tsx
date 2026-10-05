@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+
+const roboto = Roboto({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Find aircraft near you – Aircraft near me",
@@ -8,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.variable}>
       <head>
         {/* Load the vendor CSS unchanged: its legacy browser rules cannot be parsed by Turbopack. */}
         {/* eslint-disable-next-line @next/next/no-css-tags */}
